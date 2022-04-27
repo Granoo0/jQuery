@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+</head>
+	<style>
+    #rrethi{
+		margin-top:10px;
+		width:300px;
+		height:300px;
+		border-radius:150px;
+		background-color:green;
+	}
+	</style>
+
+<body>
+	<div id="rrethi"></div>
+	<p> Tekst per permbajtjen e HTML Elementit</p>
+	<a href="http://probitacademy.com">Probit Academy</a>
+	<script>
+		$("#rrethi").hover(function(){
+			$("p").html("Ndryshimi i permbajtjes per HTML elemntin");
+			$("a").html("Probit Shkolla");
+			$("a").attr("href", "http://probitshkolla.com")
+		})
+	</script>
+</body>
+</html>

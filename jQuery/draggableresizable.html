@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+</head>
+	<style>
+	#katrori-levizes,#katrori-madhesi{
+		width:200px;
+		height:200px;
+		text-align: center;
+		background-color:green;
+		color:#fff;
+		margin-top:10px;
+		margin-left:200px;
+	}
+	#katrori-madhesi{
+		background-color:red;
+	}
+	p{
+		position:relative;
+		top:45%;
+	}
+	</style>
+
+<body>
+	
+	<div id="katrori-levizes">
+		<p>Me leviz mua!</p>
+	</div>
+	<div id="katrori-madhesi">
+		<p>Me ndrysho madhesin mua!</p>
+	</div>
+	<script>
+		$("#katrori-levizes").draggable();
+		$("#katrori-madhesi").resizable();
+	</script>
+</body>
+</html>

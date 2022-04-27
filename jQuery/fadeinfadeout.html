@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+</head>
+
+<body>
+	<p>Disa pjes teskti ne nje HTML paragraf</p>
+	<button id="fadeIn">Fade In</button>
+	<button id="fadeOut">Fade Out</button>
+	<script>
+		$("#fadeIn").click(function(){
+			$("p").fadeIn(5000,function(){
+			alert("Paragrafi u kthye ne normalitet!");
+			})
+		});
+		
+		$("#fadeOut").click(function(){
+			$("p").fadeOut(3000,function(){
+				alert("Paragrafi u fsheh me sukses!")
+			});
+		});
+	</script>
+</body>
+</html>
+

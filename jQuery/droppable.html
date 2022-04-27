@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<link href="jquery-ui.css" rel="stylesheet">
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<style>
+	#katrori,#drop-katrori{
+		width:300px;
+		height:300px;
+		text-align: center;
+		background-color:green;
+		color:#fff;
+		margin-top:10px;
+	}
+	#drop-katrori{
+		width:200px;
+		height:200px;
+		background-color:red;
+	}
+	p{
+		position:relative;
+		top:45%;
+	}
+	</style>
+</head>
+<body>
+	
+	<div id="katrori">
+	</div>
+	<div id="drop-katrori">
+		<p>Me bart mua brenda katrorit te madhe!</p>
+	</div>
+	
+	<script>
+		$("#drop-katrori").draggable();
+		$("#katrori").droppable({
+			drop: function(ui, event){
+				$("#drop-katrori").innerHTML("position", "relative");
+				// $("#drop-katrori").css("background-color", "black");
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>jQuery Projekti</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+</head>
+<style>
+	#wrapper {
+		width: 70%;
+		margin: 0 auto;
+		min-height: 300px;
+		height: auto;
+		font-size: 1.2em;
+		font-family: helvetas;
+	}
+
+	input[type="text"] {
+		float: left;
+		width: 50%;
+		height: 35px;
+		border-radius: 10px;
+		padding-left: 5px;
+		margin-top: 10px;
+		border: 1px solid gray;
+	}
+
+	label {
+		float: left;
+		width: 20%;
+		height: 32px;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		margin-top: 17px;
+
+	}
+
+	.errors {
+		float: left;
+		margin-top: 15px;
+		margin-left: 10px;
+		color: red;
+	}
+
+	#dergoButon {
+		float: right;
+		width: 40%;
+		height: 35px;
+		margin-top: 20px;
+
+	}
+
+	#validimiForma {
+		padding-top: 30px;
+		width: 60%;
+		margin: 0 auto;
+
+	}
+
+	legend {
+		width: 50%;
+		font-size: 1.4em;
+		text-align: center;
+		font-weight: bold;
+		margin-bottom: 40px;
+	}
+</style>
+
+<body>
+	<div id="wrapper">
+		<form id="validimiForma" action="">
+			<legend>Valdimi me jQuery</legend>
+			<fieldset>
+				<label for="emri">Emri :</label>
+				<input type="text" id="emri" name="emri" />
+			</fieldset>
+			<fieldset>
+				<label for="mbiemri">Mbiemri :</label>
+				<input type="text" id="mbiemri" name="mbiemri" />
+			</fieldset>
+			<fieldset>
+				<label for="email">Email :</label>
+				<input type="text" id="email" name="email" />
+			</fieldset>
+			<fieldset>
+				<label for="telefoni">Telefoni :</label>
+				<input type="text" id="telefoni" type="number" type="numb" />
+			</fieldset>
+			<fieldset>
+				<label for="fjalekalimi">Fjalekalimi :</label>
+				<input type="text" id="fjalekalimi" name="fjalekalimi" />
+			</fieldset>
+			<input type="submit" id="dergoButon" value="Dergo" />
+		</form>
+	</div>
+	<div id="mesazhi"></div>
+	<script>
+		$("#validimiForma").submit(function (event) {
+			let emri=$("#emri").val();
+			let mbiemri=$("#mbiemri").val();
+			let mesazhi= "";
+			let gabime =false;
+
+			$(".errors").remove();
+			if(!emri){
+				mesazhi="Ju lutem shenoni emrin <br>";
+				$("#emri").after("<span class='errors'> Ju lutem shenoni emrin </span>");
+				gabime=true;
+			}
+
+			if(!mbiemri){
+				$("#mbiemri").after("<span class='errors'> Ju lutem shenoni mbiemrin </span>");
+				mesazhi+="Ju lutem shenoni mbiemrin <br>";
+				gabime=true;
+			}
+			if(gabime){
+				$("#mesazhi").html(mesazhi);
+				return false;
+			}else{
+				return true;
+			}
+
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+</head>
+	<style>
+	.katrori, #rrethi{
+		margin-top:10px;
+		width:200px;
+		height:200px;
+		background-color:red;
+	}
+	#rrethi{
+		border-radius:100px;
+		background-color:green;
+	}
+	</style>
+
+<body>
+	<div id="rrethi"></div>
+	<div class="katrori"></div>
+	<script>
+	$("#rrethi, .katrori").hover(function(){
+		$("#rrethi").css("background-color", "yellow");
+		$(".katrori").css("display", "none");
+		$("#rrethi , .katrori").hide(3000);
+		$("#rrethi, .katrori").show(3000);
+		$(".katrori").css("background-color", "blue");
+	})
+	</script>
+</body>
+</html>
+

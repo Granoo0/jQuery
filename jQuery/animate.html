@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <title>Mesimi i jQuery</title>
+	<script type="text/javascript" src="jquery-3.6.0.js"></script>
+	<style>
+	.katrori, #rrethi{
+		margin-top:10px;
+		width:200px;
+		height:200px;
+		border-radius:100px;
+		background-color:green;
+	}
+	</style>
+</head>
+<body>
+	<div id="rrethi"></div>
+	<script>
+		$("#rrethi").click(function(){
+			$(this).animate({
+				borderRadius:"150px",
+				marginLeft:"100px",
+				width:"300px",
+				marginTop:"100px",
+				height:"300px"
+			});
+		});
+	</script>
+</body>
+</html>
